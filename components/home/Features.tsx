@@ -1,7 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { featuresData } from "@/lib/data";
-
+// ${
+//   feature.id === 3 ? "md:w-[22.3%]" : "w-[30%]"
+// } ${feature.id === 4 ? "md:w-[35%]" : "md:w-[30%]"} ${feature.id === 5 ? 'md:w-[22.3%]' : 'md:w-[30%]'}
+// ${feature.id === 6 ? 'md:w-[24.99%]' : 'md:w-[30%]'}`}
 const Features = () => {
   return (
     <div
@@ -18,23 +21,21 @@ const Features = () => {
       <div className="flex flex-col items-center md:grid md:grid-cols-2 gap-[2%] md:gap-[5%] space-y-[5%] md:space-y-[5%] px-[2%] md:px-[5%] xl:py-[10%]">
         {featuresData.map((feature) => (
           <div
-            className={`flex gap-5 ${feature.id === 1 ? "mt-[5%]" : "mt-0"}`}
+            className={`flex gap-[3%] ${feature.id === 1 ? "mt-[5%]" : "mt-0"}`}
             key={feature.id}
           >
-            <div
-              className={`hidden lg:flex items-start ${
-                feature.id === 3 ? "md:w-[22.5%]" : "w-[30%]"
-              } ${feature.id === 4 ? "md:w-[35%]" : "md:w-[30%]"} ${feature.id === 5 ? 'md:w-[22.5%]' : 'md:w-[30%]'}
-              ${feature.id === 6 ? 'md:w-[26%]' : 'md:w-[30%]'}`}
-            >
+            {/* <div
+              className={`hidden lg:flex items-start`}
+              
+            > */}
               <Image
                 src={feature.icon}
                 width={100}
                 height={1}
                 alt="feautre icon"
-                className=""
+                className="w-[12%]"
               />
-            </div>
+            {/* </div> */}
 
             <div className="flex-col text-white">
               <h1 className="text-lg md:text-2xl text-center md:text-left font-bold md:font-semibold">

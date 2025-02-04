@@ -60,7 +60,7 @@ const Header = () => {
             time searching – start acting on what you know.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row justify-center gap-5">
+        <div className="flex flex-col md:flex-row justify-start gap-5">
           <Link href="/chat" className="flex justify-center">
           <button className="text-sm md:text-lg text-white font-bold bg-[#E6C773] px-[5%] md:px-12 py-4 rounded-lg">
             RAG in Action
