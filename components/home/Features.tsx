@@ -33,7 +33,7 @@ const Features = () => {
                 width={100}
                 height={1}
                 alt="feautre icon"
-                className="w-[12%]"
+                className="hidden md:block w-[12%]"
               />
             {/* </div> */}
 
