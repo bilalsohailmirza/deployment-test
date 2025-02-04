@@ -1,0 +1,9 @@
+node_modules
+.env
+.env.local
+.next
+.vercel
+api_documentation.md
+auth_guide.md
+endpoint_change.md
+blogposts/

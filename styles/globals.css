@@ -1,0 +1,303 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+
+    --chat-background: 0 0% 98%;
+    --chat-bubble: 213.8 100% 96.9%;
+    --new-chat-button: 240 10% 3.9%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+
+    --chat-background: 0 0% 9%;
+    --chat-bubble: 0 0% 14.9%;
+    --new-chat-button: 0 0% 98%;
+  }
+
+  .blue {
+    --background: 217 100% 97%;
+    --foreground: 217 100% 10%;
+
+    --card: 217 100% 97%;
+    --card-foreground: 217 100% 10%;
+
+    --popover: 217 100% 97%;
+    --popover-foreground: 217 100% 10%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 217 100% 97%;
+
+    --secondary: 217 100% 92%;
+    --secondary-foreground: 217 100% 10%;
+
+    --muted: 217 100% 92%;
+    --muted-foreground: 217 50% 40%;
+
+    --accent: 217 100% 92%;
+    --accent-foreground: 217 100% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 217 100% 97%;
+
+    --border: 217 50% 85%;
+    --input: 217 50% 85%;
+    --ring: 217 91% 60%;
+  }
+
+  .green {
+    --background: 142 100% 97%;
+    --foreground: 142 100% 10%;
+
+    --card: 142 100% 97%;
+    --card-foreground: 142 100% 10%;
+
+    --popover: 142 100% 97%;
+    --popover-foreground: 142 100% 10%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 142 100% 97%;
+
+    --secondary: 142 100% 92%;
+    --secondary-foreground: 142 100% 10%;
+
+    --muted: 142 100% 92%;
+    --muted-foreground: 142 50% 40%;
+
+    --accent: 142 100% 92%;
+    --accent-foreground: 142 100% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 142 100% 97%;
+
+    --border: 142 50% 85%;
+    --input: 142 50% 85%;
+    --ring: 142 76% 36%;
+  }
+
+  .red {
+    --background: 0 100% 97%;
+    --foreground: 0 100% 10%;
+
+    --card: 0 100% 97%;
+    --card-foreground: 0 100% 10%;
+
+    --popover: 0 100% 97%;
+    --popover-foreground: 0 100% 10%;
+
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 100% 97%;
+
+    --secondary: 0 100% 92%;
+    --secondary-foreground: 0 100% 10%;
+
+    --muted: 0 100% 92%;
+    --muted-foreground: 0 50% 40%;
+
+    --accent: 0 100% 92%;
+    --accent-foreground: 0 100% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 100% 97%;
+
+    --border: 0 50% 85%;
+    --input: 0 50% 85%;
+    --ring: 0 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+}
+
+.prose {
+  max-width: none;
+}
+
+.prose pre {
+  @apply bg-muted/50 dark:bg-muted/80;
+}
+
+.prose code {
+  @apply bg-muted/50 dark:bg-muted/80 px-1 py-0.5 rounded;
+}
+
+.prose a {
+  @apply text-primary hover:underline;
+}
+
+.prose p {
+  @apply mb-4 leading-7;
+}
+
+.prose ul {
+  @apply mb-4 list-disc pl-6;
+}
+
+.prose ol {
+  @apply mb-4 list-decimal pl-6;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply font-semibold text-foreground mb-4;
+}
+
+.prose hr {
+  @apply border-t border-border my-8;
+}
+
+.prose table {
+  @apply w-full my-6 border-collapse;
+}
+
+.prose table th {
+  @apply px-4 py-2 text-left border border-border bg-muted/50 font-semibold;
+}
+
+.prose table td {
+  @apply px-4 py-2 border border-border;
+}
+
+.prose table tr {
+  @apply hover:bg-muted/30 transition-colors;
+}
+
+.prose blockquote {
+  @apply pl-4 border-l-4 border-border italic my-4;
+}
+
+.prose hr {
+  @apply my-8 border-t border-border;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+.chat-message {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.chat-message:hover {
+  @apply shadow-md;
+}
+
+.feature-curve {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}
+
+/* .feature-curve::before{
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 10% 10%;
+  width: 100%;
+  height: 400%;
+  background-color: #262626;
+  transform: translate(-5%, -60%);
+  z-index: -2;
+}
+
+.feature-curve::after{
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 60% 10%;
+  width: 50%;
+  height: 40%;
+  background-color: black;
+  transform: translate(30%, 10%);
+  z-index: -1;
+} */
+
+.feature-curve::after {
+  content: '';
+  border-bottom-right-radius: 50% 100%;
+  border-bottom-left-radius: 45% 15%;
+  border-left-width: 150%;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #262626;
+  z-index: -1
+}
